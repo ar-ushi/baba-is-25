@@ -7,14 +7,17 @@ import Level3 from "./pages/Level3.jsx";
 import Level4 from "./pages/Level4.jsx";
 import Letter from "./pages/Letter.jsx";
 import Stars from "./components/Stars";
+import kanye from "./assets/kanye.mp3";
+import tame from "./assets/tameimpala.mp3";
+import vance from "./assets/vance-joy.mp3";
 
 export default function App() {
   const [screen, setScreen] = useState("landing"); // landing -> lore -> level1
   const audioRef = useRef(null);
   const tracks = [
-    { src: "/kanye.mp3", playTime: 20 }, // only play 20s of first track
-    { src: "/tameimpala.mp3" }, // full track
-    { src: "/vance-joy.mp3" }, // full track
+    { src: kanye, playTime: 20 }, // only play 20s of first track
+    { src: tame}, // full track
+    { src: vance }, // full track
   ];
   const [currentTrack, setCurrentTrack] = useState(0);
   const [started, setStarted] = useState(false);

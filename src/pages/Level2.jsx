@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import chess from "../assets/chess-level-2-game-1.png";
 export default function Level2({ onNext }) {
   const [move1, setMove1] = useState("");
   const [move2, setMove2] = useState("");
@@ -63,10 +63,7 @@ export default function Level2({ onNext }) {
           <p>Use Chess Notation (strictly)</p>
         </div>
       </div>
-      <img
-        src="/chess-level-2-game-1.png"
-        className="mt-6 gap-5 max-w-full max-h-full"
-      />
+      <img src={chess} className="mt-6 gap-5 max-w-full max-h-full" />
 
       <div className="flex flex-col w-64 space-y-2 mt-6">
         <label className="text-white font-default">Move 1</label>
